@@ -1,7 +1,7 @@
 /* Terminal: monospaced everything, square corners, dashed rules. */
 :root {
-  --font-sans: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
-  --font-heading: var(--font-sans);
+  /* The app's sans-serif is read from --font-geist-sans. */
+  --font-geist-sans: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
   --radius: 0.125rem;
 }
 

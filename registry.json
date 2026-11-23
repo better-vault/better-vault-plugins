@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-23T20:39:24.649Z",
+  "updatedAt": "2026-11-23T20:40:09.192Z",
   "plugins": [
     {
       "id": "notebook-stats",
@@ -86,7 +86,7 @@
     {
       "id": "terminal",
       "name": "Terminal",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "description": "Reimagines better-vault as a terminal: monospaced type, square corners, dashed rules and phosphor-green accents, in light and dark mode.",
       "author": "better-vault",
       "icon": "code",
@@ -103,11 +103,11 @@
         "mods": 1,
         "theme": true
       },
-      "bundle": "dist/terminal-1.0.0.bvplugin.json",
-      "sha256": "6de7cad2e9731f7d4006e51c3f2e35fc547ab3e40f7cc3e18bf88ee31c3fd2cf",
-      "size": 2476,
+      "bundle": "dist/terminal-1.0.1.bvplugin.json",
+      "sha256": "1dd575ba6810eac6c675d52757a75e99a8e1510573e946e568c89241eaf858bb",
+      "size": 2507,
       "screenshots": [],
-      "updatedAt": "2026-11-23T20:37:32.268Z"
+      "updatedAt": "2026-11-23T20:40:09.192Z"
     }
   ]
 }

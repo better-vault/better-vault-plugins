@@ -2,7 +2,7 @@
   "manifestVersion": 2,
   "id": "terminal",
   "name": "Terminal",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Reimagines better-vault as a terminal: monospaced type, square corners, dashed rules and phosphor-green accents, in light and dark mode.",
   "author": "better-vault",
   "icon": "code",
