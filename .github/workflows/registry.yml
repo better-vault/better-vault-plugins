@@ -1,0 +1,36 @@
+name: Registry
+
+# On every merge, rebuild the bundles and registry.json. The app and
+# better-vault.dev read registry.json from main, so a merged plugin appears
+# in both without a release.
+on:
+  push:
+    branches: [main]
+    paths: ["plugins/**", "scripts/**"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: registry
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install --no-audit --no-fund
+      - run: npm run build
+      - name: Commit the registry
+        run: |
+          if git diff --quiet -- registry.json dist; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add registry.json dist
+          git commit -m "chore: rebuild the registry"
+          git push

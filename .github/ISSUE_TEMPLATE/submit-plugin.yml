@@ -1,0 +1,22 @@
+name: Submit a plugin
+description: Tell us about a plugin you built, before or alongside your pull request.
+labels: ["plugin submission"]
+body:
+  - type: input
+    id: id
+    attributes:
+      label: Plugin id
+      placeholder: piano-coach
+    validations:
+      required: true
+  - type: input
+    id: pr
+    attributes:
+      label: Pull request
+      description: A link to your pull request that adds plugins/<id>/.
+  - type: textarea
+    id: about
+    attributes:
+      label: What it does and why it asks for each permission
+    validations:
+      required: true

@@ -1,0 +1,16 @@
+{
+  "name": "better-vault-plugins",
+  "private": true,
+  "type": "module",
+  "description": "The better-vault plugin directory: reviewed plugins and the registry the app and website read.",
+  "scripts": {
+    "validate": "node scripts/build.mjs --check",
+    "build": "node scripts/build.mjs"
+  },
+  "dependencies": {
+    "zod": "^4.1.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

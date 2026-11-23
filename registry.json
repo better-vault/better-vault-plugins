@@ -1,0 +1,113 @@
+{
+  "version": 1,
+  "updatedAt": "2026-11-23T20:37:32.268Z",
+  "plugins": [
+    {
+      "id": "notebook-stats",
+      "name": "Notebook stats",
+      "version": "1.1.0",
+      "description": "How much each source in the notebook holds, as bars, with its format.",
+      "author": "better-vault",
+      "icon": "chart",
+      "tags": [
+        "sources",
+        "stats",
+        "charts"
+      ],
+      "permissions": [
+        "read:sources"
+      ],
+      "adds": {
+        "studioTools": 0,
+        "panels": 1,
+        "mods": 0,
+        "theme": false
+      },
+      "bundle": "dist/notebook-stats-1.1.0.bvplugin.json",
+      "sha256": "37998790a9c3358d19eb669f22c44a5a1b5d526c3990fe51269b6a47c93d2ef2",
+      "size": 2622,
+      "screenshots": [],
+      "updatedAt": "2026-11-23T20:37:32.268Z"
+    },
+    {
+      "id": "paper",
+      "name": "Paper",
+      "version": "1.0.0",
+      "description": "Warm paper and ink: cream pages, brown-black text and serif headings, for reading and writing for hours.",
+      "author": "better-vault",
+      "icon": "book",
+      "tags": [
+        "theme",
+        "mod",
+        "reading",
+        "serif"
+      ],
+      "permissions": [],
+      "adds": {
+        "studioTools": 0,
+        "panels": 0,
+        "mods": 1,
+        "theme": true
+      },
+      "bundle": "dist/paper-1.0.0.bvplugin.json",
+      "sha256": "f9e20c4624480314e97490369cca7815443b6d02196ee535de91247350121f70",
+      "size": 1321,
+      "screenshots": [],
+      "updatedAt": "2026-11-23T20:37:32.268Z"
+    },
+    {
+      "id": "piano-coach",
+      "name": "Piano coach",
+      "version": "1.0.0",
+      "description": "Learn the piano in the Studio: a keyboard you can play with the mouse or your computer keys, lessons that light up the next note, and new exercises written by your AI model.",
+      "author": "better-vault",
+      "icon": "music",
+      "tags": [
+        "music",
+        "piano",
+        "learning",
+        "studio tool"
+      ],
+      "permissions": [
+        "use:ai"
+      ],
+      "adds": {
+        "studioTools": 1,
+        "panels": 0,
+        "mods": 0,
+        "theme": false
+      },
+      "bundle": "dist/piano-coach-1.0.0.bvplugin.json",
+      "sha256": "75874200351a652f135e4f3815d9382a6fac563ff9fcc384fce5bfdd6f689d9c",
+      "size": 12603,
+      "screenshots": [],
+      "updatedAt": "2026-11-23T20:37:32.268Z"
+    },
+    {
+      "id": "terminal",
+      "name": "Terminal",
+      "version": "1.0.0",
+      "description": "Reimagines better-vault as a terminal: monospaced type, square corners, dashed rules and phosphor-green accents, in light and dark mode.",
+      "author": "better-vault",
+      "icon": "code",
+      "tags": [
+        "mod",
+        "theme",
+        "monospace",
+        "retro"
+      ],
+      "permissions": [],
+      "adds": {
+        "studioTools": 0,
+        "panels": 0,
+        "mods": 1,
+        "theme": true
+      },
+      "bundle": "dist/terminal-1.0.0.bvplugin.json",
+      "sha256": "6de7cad2e9731f7d4006e51c3f2e35fc547ab3e40f7cc3e18bf88ee31c3fd2cf",
+      "size": 2476,
+      "screenshots": [],
+      "updatedAt": "2026-11-23T20:37:32.268Z"
+    }
+  ]
+}

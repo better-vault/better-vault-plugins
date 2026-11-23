@@ -1,0 +1,28 @@
+name: Request a plugin
+description: An idea for a plugin you would like someone to build.
+labels: ["plugin request"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What should it do?
+      description: Describe the plugin as a user would use it.
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of plugin?
+      options:
+        - Studio tool
+        - Panel
+        - Mod (changes how the app looks)
+        - Theme
+        - Not sure
+    validations:
+      required: true
+  - type: textarea
+    id: data
+    attributes:
+      label: What would it need to read or change?
+      description: Notebooks, sources, notes, skills, the calendar, or your AI model.

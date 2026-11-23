@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Plugin docs
+    url: https://better-vault.dev/docs/plugins
+    about: How to build a plugin for better-vault.
