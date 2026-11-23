@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-23T21:37:45.583Z",
+  "updatedAt": "2026-11-23T21:41:23.474Z",
   "plugins": [
     {
       "id": "notebook-stats",
@@ -80,7 +80,11 @@
       "bundle": "dist/piano-coach-1.0.1.bvplugin.json",
       "sha256": "45fb1d211090d5fe306cf35d7d6b310e4daaff3763b4bec9fc56b55983aa26d3",
       "size": 13548,
-      "screenshots": [],
+      "cover": "plugins/piano-coach/cover.png",
+      "screenshots": [
+        "plugins/piano-coach/screenshots/1-dark.png",
+        "plugins/piano-coach/screenshots/2-light.png"
+      ],
       "updatedAt": "2026-11-23T21:37:45.583Z"
     },
     {
