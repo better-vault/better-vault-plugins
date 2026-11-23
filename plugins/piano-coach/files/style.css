@@ -31,3 +31,5 @@ button { font: inherit; cursor: pointer; border: 0; }
 .black.lit { background: color-mix(in oklab, var(--chart-2) 70%, #1d1d1f); }
 .white kbd, .black kbd { font: inherit; opacity: .7; }
 @media (prefers-reduced-motion: reduce) { .note { transition: none; } .note.miss { animation: none; } }
+.note sub { font-size: 9px; opacity: .6; margin-inline-start: 1px; }
+.white.also { box-shadow: inset 0 -6px 0 color-mix(in oklab, var(--chart-2) 50%, transparent); }

@@ -136,6 +136,7 @@ for (const id of readdirSync(pluginsDir).sort()) {
         .sort()
         .map((name) => `plugins/${id}/screenshots/${name}`)
     : [];
+  const cover = ["cover.png", "cover.jpg", "cover.webp"].find((name) => existsSync(path.join(dir, name)));
   const bundlePath = `dist/${id}-${manifest.version}.bvplugin.json`;
   bundles.push({ bundlePath, bundle });
   entries.push({
@@ -156,6 +157,7 @@ for (const id of readdirSync(pluginsDir).sort()) {
     bundle: bundlePath,
     sha256: createHash("sha256").update(bundle).digest("hex"),
     size: bundle.length,
+    ...(cover ? { cover: `plugins/${id}/${cover}` } : {}),
     screenshots,
   });
 }

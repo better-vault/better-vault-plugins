@@ -2,7 +2,7 @@
   "manifestVersion": 2,
   "id": "piano-coach",
   "name": "Piano coach",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Learn the piano in the Studio: a keyboard you can play with the mouse or your computer keys, lessons that light up the next note, and new exercises written by your AI model.",
   "author": "better-vault",
   "icon": "music",

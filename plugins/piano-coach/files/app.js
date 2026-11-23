@@ -97,10 +97,14 @@ function render() {
   lesson.notes.forEach((note, at) => {
     const el = document.createElement("span");
     el.className = "note" + (at < position ? " done" : at === position ? " next" : "");
-    el.textContent = note.replace(/\d/, "");
+    el.innerHTML = `${pitch(note)}<sub>${note.match(/\d+$/)?.[0] ?? ""}</sub>`;
     notesEl.appendChild(el);
   });
-  for (const [note, el] of elements) el.classList.toggle("lit", note === lesson.notes[position]);
+  const next = lesson.notes[position];
+  for (const [note, el] of elements) {
+    el.classList.toggle("lit", note === next);
+    el.classList.toggle("also", next !== undefined && note !== next && pitch(note) === pitch(next));
+  }
   scoreEl.textContent = score;
   totalEl.textContent = lesson.notes.length;
 }
@@ -114,9 +118,16 @@ function choose(next) {
   render();
 }
 
+// The note's name without its octave: C4 and C5 are both "C".
+const pitch = (note) => note.replace(/\d+$/, "");
+
 function check(note) {
-  if (position >= lesson.notes.length) return;
-  if (note === lesson.notes[position]) {
+  if (position >= lesson.notes.length) {
+    statusEl.textContent = "Lesson done. Press “Start again” or choose another lesson.";
+    return;
+  }
+  // The right note in any octave counts, so learners aren't failed for the wrong C.
+  if (pitch(note) === pitch(lesson.notes[position])) {
     score++;
     position++;
     if (position === lesson.notes.length) finished();
@@ -179,7 +190,10 @@ aiButton.addEventListener("click", async () => {
         required: ["title", "notes"],
       },
     });
-    const notes = (object?.notes || []).filter((note) => KEYS.some((key) => key.note === note));
+    const FLATS = { Db: "C#", Eb: "D#", Gb: "F#", Ab: "G#", Bb: "A#" };
+    const notes = (object?.notes || [])
+      .map((note) => String(note).trim().replace(/^([A-G]b)(\d)$/, (_, name, octave) => (FLATS[name] || name) + octave))
+      .filter((note) => KEYS.some((key) => key.note === note));
     if (notes.length < 4) throw new Error("The exercise had too few playable notes.");
     const next = { title: String(object.title || "AI exercise").slice(0, 40), notes };
     addLesson(next);

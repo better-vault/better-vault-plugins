@@ -10,7 +10,8 @@ Each plugin is a folder in `plugins/`, named after its id:
 plugins/piano-coach/
   manifest.json      the plugin's manifest
   files/             everything the plugin ships: HTML, CSS, JavaScript
-  screenshots/       optional pictures for the directory (not shipped)
+  cover.png          the card's header picture, 1200 × 630 (not shipped)
+  screenshots/       pictures of the plugin at work, shown in its dialog (not shipped)
   README.md          what it does, for reviewers and users (not shipped)
 ```
 
