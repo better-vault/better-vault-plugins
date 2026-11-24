@@ -19,7 +19,9 @@ Pages run in a sandbox with no network and no access to the app's storage, keys 
 
 ## Submit a plugin
 
-Read [CONTRIBUTING.md](CONTRIBUTING.md), then open a pull request that adds your plugin under `plugins/<id>/`. Once it is reviewed and merged, the registry is rebuilt and the plugin appears in the app and on the website on its own, with no release.
+Each plugin lives in its creator's own public GitHub repository, and this directory lists it with a small file, `plugins/<id>.json`, that names the repository and the commit to list. Read [CONTRIBUTING.md](CONTRIBUTING.md), then open a pull request that adds your listing. The checks confirm you own the repository; once a maintainer has reviewed and merged it, the plugin appears in the app and on the website on its own, with your GitHub avatar and your repository's stars.
+
+To update your plugin, raise its version and open a pull request that changes the listed commit. Only the repository's owner can do this.
 
 ## Request a plugin
 
@@ -27,4 +29,4 @@ If you have an idea but won't build it yourself, [open a plugin request](https:/
 
 ## How the registry is made
 
-`scripts/build.mjs` checks every plugin against the same rules the app uses, bundles each into `dist/<id>-<version>.bvplugin.json`, and writes `registry.json` with each bundle's SHA-256. The app checks that hash before it installs anything. A workflow runs it on every push to `main`; pull requests run the same checks with `npm run validate`.
+`scripts/build.mjs` downloads each listed commit, checks it against the same rules the app uses (including a required cover and screenshots), bundles it into `dist/<id>-<version>.bvplugin.json`, copies its pictures into `assets/<id>/`, reads its repository's stars, and writes `registry.json` with each bundle's SHA-256. The app checks that hash before it installs anything. A workflow runs it on every push to `main` and every six hours; pull requests run `scripts/verify-owner.mjs` (the author owns the repository) and the same checks with `npm run validate`.

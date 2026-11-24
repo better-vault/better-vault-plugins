@@ -1,5 +1,8 @@
 name: Validate
 
+# Checks a pull request: the person opening it must own the plugin's
+# repository (scripts/verify-owner.mjs), and the listed commit must pass the
+# app's rules, with a cover and screenshots (scripts/build.mjs --check).
 on:
   pull_request:
 
@@ -11,8 +14,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: 22
       - run: npm install --no-audit --no-fund
-      - run: npm run validate
+      - name: The author owns what they list
+        run: node scripts/verify-owner.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: The plugins pass the checks
+        run: npm run validate
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

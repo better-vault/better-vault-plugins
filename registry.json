@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-23T21:41:23.474Z",
+  "updatedAt": "2026-11-24T04:06:21.237Z",
   "plugins": [
     {
       "id": "notebook-stats",
@@ -21,12 +21,22 @@
         "studioTools": 0,
         "panels": 1,
         "mods": 0,
-        "theme": false
+        "theme": false,
+        "graphStyles": 0
       },
       "bundle": "dist/notebook-stats-1.1.0.bvplugin.json",
       "sha256": "37998790a9c3358d19eb669f22c44a5a1b5d526c3990fe51269b6a47c93d2ef2",
       "size": 2622,
-      "screenshots": [],
+      "repo": "better-vault/plugin-notebook-stats",
+      "commit": "387f1674fac8c3ad10efbfa93e5477ee1d46bc79",
+      "owner": "better-vault",
+      "ownerType": "organization",
+      "stars": 0,
+      "cover": "assets/notebook-stats/cover.png",
+      "screenshots": [
+        "assets/notebook-stats/screenshots/1.png",
+        "assets/notebook-stats/screenshots/2.png"
+      ],
       "updatedAt": "2026-11-23T20:37:32.268Z"
     },
     {
@@ -47,12 +57,22 @@
         "studioTools": 0,
         "panels": 0,
         "mods": 1,
-        "theme": true
+        "theme": true,
+        "graphStyles": 0
       },
       "bundle": "dist/paper-1.0.0.bvplugin.json",
       "sha256": "f9e20c4624480314e97490369cca7815443b6d02196ee535de91247350121f70",
       "size": 1321,
-      "screenshots": [],
+      "repo": "better-vault/plugin-paper",
+      "commit": "55b0a49aa9d45d77010aef78a6d077c210fa0204",
+      "owner": "better-vault",
+      "ownerType": "organization",
+      "stars": 0,
+      "cover": "assets/paper/cover.png",
+      "screenshots": [
+        "assets/paper/screenshots/1.png",
+        "assets/paper/screenshots/2.png"
+      ],
       "updatedAt": "2026-11-23T20:37:32.268Z"
     },
     {
@@ -75,15 +95,21 @@
         "studioTools": 1,
         "panels": 0,
         "mods": 0,
-        "theme": false
+        "theme": false,
+        "graphStyles": 0
       },
       "bundle": "dist/piano-coach-1.0.1.bvplugin.json",
       "sha256": "45fb1d211090d5fe306cf35d7d6b310e4daaff3763b4bec9fc56b55983aa26d3",
       "size": 13548,
-      "cover": "plugins/piano-coach/cover.png",
+      "repo": "better-vault/plugin-piano-coach",
+      "commit": "7bd983d3a5a23daf859f45fe7261fd1af696c76c",
+      "owner": "better-vault",
+      "ownerType": "organization",
+      "stars": 0,
+      "cover": "assets/piano-coach/cover.png",
       "screenshots": [
-        "plugins/piano-coach/screenshots/1-dark.png",
-        "plugins/piano-coach/screenshots/2-light.png"
+        "assets/piano-coach/screenshots/1-dark.png",
+        "assets/piano-coach/screenshots/2-light.png"
       ],
       "updatedAt": "2026-11-23T21:37:45.583Z"
     },
@@ -105,12 +131,22 @@
         "studioTools": 0,
         "panels": 0,
         "mods": 1,
-        "theme": true
+        "theme": true,
+        "graphStyles": 0
       },
       "bundle": "dist/terminal-1.0.1.bvplugin.json",
       "sha256": "1dd575ba6810eac6c675d52757a75e99a8e1510573e946e568c89241eaf858bb",
       "size": 2507,
-      "screenshots": [],
+      "repo": "better-vault/plugin-terminal",
+      "commit": "b1a5a3d2391e69e2b755534ecd2d9624bf034f82",
+      "owner": "better-vault",
+      "ownerType": "organization",
+      "stars": 0,
+      "cover": "assets/terminal/cover.png",
+      "screenshots": [
+        "assets/terminal/screenshots/1.png",
+        "assets/terminal/screenshots/2.png"
+      ],
       "updatedAt": "2026-11-23T20:40:09.192Z"
     }
   ]
